@@ -1,3 +1,11 @@
+## Coursera:R Programming Assignment 2
+
+##makeCacheMatrix function creates a special "matrix", which
+##really a list containing a function to
+## 1) set the value of the matrix 
+## 2) get the value of the matrix
+## 3) set the value of the inverse matrix
+## 4) get the value of the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
         s <- NULL
@@ -13,6 +21,9 @@ makeCacheMatrix <- function(x = matrix()) {
             getinverse = getinverse)
 }
 
+## cacheSolve function calculates the inverse special "matrix"
+## created with the above function. But it returns the saved
+## inverse matrix from the cache if it has already been calculated.
 
 cacheSolve <- function(x, ...) {
             s <- x$getinverse()
